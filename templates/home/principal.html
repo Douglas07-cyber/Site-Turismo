@@ -10,7 +10,33 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}" />
   </head>
   <body>
-    <header></header>
+      <header>
+        <!--  -->
+        <nav class="navbar navbar-expand-sm nav-top">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#pacotes">Pacotes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contatos">Contatos</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="text" placeholder="Pesquisar...">
+                  <button class="btn btn-primary" type="button">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
     <main>
       <!-- Carousel -->
       <div id="demo" class="carousel slide" data-bs-ride="carousel">
