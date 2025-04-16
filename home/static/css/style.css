@@ -3,3 +3,27 @@
 .nav-top{
     background-color: #A3E3FF;
 }
+
+/* Centralizar imagens no carrossel */
+.carousel-inner {
+    text-align: center;
+  }
+  
+  .carousel-item img {
+    margin: 0 auto;         /* Centraliza horizontalmente */
+    max-height: 500px;      /* Limita a altura da imagem */
+    width: auto;            /* Mantém proporção original */
+    object-fit: contain;    /* Garante que não distorça */
+    display: block;
+  }
+  
+  /* Deixar o footer fixo e visível sem sobrepor conteúdo */
+  footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
