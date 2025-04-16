@@ -1,30 +1,88 @@
-/* Cor da barra de navegação */
-
-.nav-top{
-    background-color: #A3E3FF;
+/* === NAVBAR === */
+.nav-top {
+  background-color: rgb(136, 202, 240) !important;
 }
 
-/* Centralizar imagens no carrossel */
-.carousel-inner {
-    text-align: center;
+.nav-link {
+  color: rgba(0, 0, 0, 0.904) !important;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: rgb(55, 202, 228) !important;
+  color: rgb(17, 17, 17) !important;
+  text-align: center !important;
+  padding: 10px;
+}
+
+/* === CAROUSEL === */
+.car-img {
+  max-height: 40em !important;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(82, 77, 77, 0.739) !important;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* === DIVISÕES === */
+.divisao {
+  background-color: rgba(36, 156, 192, 0.801) !important;
+  text-align: center !important;
+  color: rgb(17, 17, 17) !important;
+  padding: 2em !important;
+}
+
+/* === PACOTES === */
+.sec-pacotes {
+  margin: 2% 10% !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1% !important;
+  margin: 0% 1% 1% !important;
+  width: 300px;
+}
+
+.card p {
+  text-align: justify !important;
+}
+
+.card h4 {
+  color: rgb(236, 16, 16) !important;
+}
+
+/* === CONTATO === */
+.sec-contato {
+  margin: 0 10% 10% 10% !important;
+}
+
+/* === RESPONSIVO (opcional) === */
+@media (max-width: 768px) {
+  .sec-pacotes {
+      flex-direction: column;
+      align-items: center;
   }
-  
-.carousel-item img {
-    margin: 0 auto;         
-    max-height: 500px;      
-    width: auto;           
-    object-fit: contain;    
-    display: block;
+
+  .card {
+      width: 90% !important;
   }
-  
-  /* Deixar o footer fixo e visível sem sobrepor conteúdo */
-.footer {
-    background-color: #f8f9fa;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+
+  .sec-contato .col-6 {
+      width: 100%;
+      margin-bottom: 1rem;
   }
-  .
-  
+
+  iframe {
+      width: 100% !important;
+      height: auto;
+  }
+}
