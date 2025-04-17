@@ -1,181 +1,44 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turismo</title>
+{% block content %}
+<!-- Pacotes -->
+<section class="row sec-pacotes" id="pacotes">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS Estático -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm nav-top">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#demo">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#pacotes">Pacotes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contatos">Contatos</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Pesquisar">
-                        <button class="btn btn-primary" type="button">Buscar</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            </div>
-
-            <!-- Slides -->
-            <div class="carousel-inner">
-                <!-- SLIDE COM VÍDEO -->
-                <div class="carousel-item active">
-                    <video class="d-block w-100 car-img" autoplay muted loop>
-                        <source src="{% static 'img/Download.mp4' %}" type="video/mp4">
-                        Seu navegador não suporta vídeos HTML5.
-                    </video>
-                    <div class="carousel-caption">
-                        <h3>Palmas Tocantins</h3>
-                        <p>Conheça a Capital do Estado</p>
-                    </div>
-                </div>
-
-                <!-- SLIDE IMAGEM 1 -->
-                <div class="carousel-item">
-                    <img src="{% static 'img/cfc8wku3mfv7i1ovlyu6.webp' %}" alt="Dunas do Jalapão" class="d-block w-100 car-img">
-                    <div class="carousel-caption">
-                        <h3>Jalapão</h3>
-                        <p>Conheça os Encantos e as Dunas deste lugar</p>
-                    </div>
-                </div>
-
-                <!-- SLIDE IMAGEM 2 -->
-                <div class="carousel-item">
-                    <img src="{% static 'img/pedra furada.jpg' %}" alt="Pedra Furada" class="d-block w-100 car-img">
-                    <div class="carousel-caption">
-                        <h3>Pedra Furada</h3>
-                        <p>Pedra Furada, onde se vê o pôr do sol mais Lindo do Brasil!</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Controles -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+    {% for pacote in pacotes %}
+    <div class="card col-3" style="width:300px">
+        <img class="card-img-top" src="{{pacote.imagem.url}}" alt="{{pacote.titulo}}">
+        <div class="card-body">
+            <h4 class="card-title">{{pacote.titulo}}</h4>
+            <p class="card-text">{{pacote.descricao}}</p>
+            <a href="" target="_blank" class="btn btn-primary">Confira</a>
         </div>
+    </div>
+    {% endfor %}
+</section>
 
-        <!-- Divisão -->
-        <div class="container-fluid divisao">
-            <h2>Visite o Tocantins</h2>
-        </div>
+<!-- Contato -->
+<div class="container-fluid divisao">
+    <h2>Fale Conosco</h2>
+</div>
 
-        <!-- Pacotes -->
-        <section class="row sec-pacotes" id="pacotes">
-            <div class="card col-3" style="width:300px">
-                <img class="card-img-top" src="{% static 'img/Feverdouro.jpg' %}" alt="Ferverdouro">
-                <div class="card-body">
-                    <h4 class="card-title">Fervedouro</h4>
-                    <p class="card-text">O Fervedouro do Alecrim, em São Félix do Tocantins, foi um dos primeiros fervedouros a abrir para a visitação do público.
-                      Atualmente, o local figura entre os principais atrativos do Jalapão, com características marcantes, que o tornam único.</p>
-                    <a href="https://guia.melhoresdestinos.com.br/cachoeira-da-velha-219-6053-l.html" target="_blank" class="btn btn-primary">Confira</a>
-                </div>
+<section class="row sec-contato" id="contatos">
+    <div class="col-12">
+        <form action="">
+            <div class="mb-3 mt-3">
+                <label for="Nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Informe seu Nome" name="nome">
             </div>
-
-            <div class="card col-3" style="width:300px">
-                <img class="card-img-top" src="{% static 'img/Roncadeira.webp' %}" alt="Roncadeira">
-                <div class="card-body">
-                    <h4 class="card-title">Cachoeira da Roncadeira</h4>
-                    <p class="card-text">A relevância do atrativo deve-se em grande parte pela própria altura da queda d’água, que chega aos 70 metros.
-                      Além disso, a própria formação do local é belíssima, com paredões de rochas e a mata nativa complementando o cenário.
-                      Abaixo da queda há uma piscina natural, formada pelas águas da cachoeira, onde é possível banhar-se tranquilamente..</p>
-                    <a href="https://www.lagoadojapones.com/" class="btn btn-primary">Confira</a>
-                </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="pwd" placeholder="Informe seu Email" name="pswd">
             </div>
-
-            <div class="card col-3" style="width:300px">
-                <img class="card-img-top" src="{% static 'img/Pedra Furada.jpg' %}" alt="Pedra Furada">
-                <div class="card-body">
-                    <h4 class="card-title">Pedra Furada</h4>
-                    <p class="card-text">O pôr do sol mais bonito do Jalapão.</p>
-                    <a href="https://guia.melhoresdestinos.com.br/pedra-furada-219-6050-l.html" class="btn btn-primary">Confira</a>
-                </div>
-            </div>
-
-            <div class="card col-3" style="width:300px">
-                <img class="card-img-top" src="{% static 'img/Azuis.jpg' %}" alt="Rio Azuis">
-                <div class="card-body">
-                    <h4 class="card-title">Rio Azuis</h4>
-                    <p class="card-text">O menor rio da América Latina, com águas cristalinas e tranquilas.</p>
-                    <a href="https://www.hojeemdia.com.br/turismo/conheca-o-rio-azuis-o-menor-do-brasil-1.1000420" class="btn btn-primary">Confira</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato -->
-        <div class="container-fluid divisao">
-            <h2>Fale Conosco</h2>
-        </div>
-
-        <section class="row sec-contato" id="contatos">
-            <div class="col-6">
-                <form action="">
-                    <div class="mb-3 mt-3">
-                        <label for="Nome" class="form-label">Nome:</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Informe seu Nome" name="nome">
-                    </div>
-                    <div class="mb-3">
-                        <label for="Email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="pwd" placeholder="Informe seu Email" name="pswd">
-                    </div>
-                    <label for="comment">Comentários:</label>
-                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-            <div class="col-6">
-                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
-    </main>
-
-    <footer class="fixed-bottom">
-        <h5>&copy; AkatsukiTur. Todos os direitos reservados a DGTECH</h5>
-    </footer>
-
-    <!-- JS Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
-
+            <label for="comment">Comentários:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <div class="col-6">
+    </div>
+</section>
+{% endblock %}

@@ -4,7 +4,8 @@
 }
 
 .nav-link {
-  color: rgba(0, 0, 0, 0.904) !important;
+  color: rgba(20, 18, 18, 0.904) !important;
+  font-size: 23px;
 }
 
 /* === FOOTER === */
@@ -62,7 +63,10 @@ footer {
 
 /* === CONTATO === */
 .sec-contato {
-  margin: 0 10% 10% 10% !important;
+  margin: 1% 20% 5% 20% !important;
+
+  justify-content: center !important;
+
 }
 
 /* === RESPONSIVO (opcional) === */

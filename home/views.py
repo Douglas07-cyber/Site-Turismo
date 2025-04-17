@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Pacote
 
 # Create your views here.
 def principal(request):
-    return render(request, 'home/principal.html')
+    pacotes = Pacote.objects.all().order_by('-created_at')
+    return render(request, 'home/principal.html', {'pacotes':pacotes})
