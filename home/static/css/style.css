@@ -30,12 +30,15 @@ footer {
   border-radius: 10px;
 }
 
-/* === DIVISÕES === */
+/* === DIVISÃO === */
 .divisao {
   background-color: rgba(36, 156, 192, 0.801) !important;
   text-align: center !important;
-  color: rgb(17, 17, 17) !important;
+  /* color: rgb(17, 17, 17) !important; */
   padding: 2em !important;
+  /* formatação da fonte */
+  font-family:'playfair Display',serif !important;
+  color: #333 !important;
 }
 
 /* === PACOTES === */
