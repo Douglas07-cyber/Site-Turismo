@@ -56,12 +56,12 @@ footer {
   width: 300px;
   height: 700px; /* Tamanho unificado dos cards */
   border-radius: 1rem;
-  border: 2px solid black; /* Bordas pretas */
+  border: 3px solid black; /* Bordas pretas */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  background-color: #c8eaee; /* Azul claro */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #e0f7fa; /* Azul claro */
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Alinha o conteúdo de forma uniforme */
 }
 
 .card:hover {
@@ -101,12 +101,15 @@ footer {
   font-size: 1rem; /* Tamanho unificado para o botão */
   transition: background-color 0.3s;
   padding: 0.75rem;
+  margin-top: 1rem; /* Adiciona um espaço entre a descrição e o botão */
 }
 
 .card .btn:hover {
   background-color: rgb(55, 202, 228);
   color: #fff;
 }
+
+
 
 
 
