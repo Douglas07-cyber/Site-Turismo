@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+    'home',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'douglasnunes224@gmail.com'
 EMAIL_HOST_PASSWORD = 'ngdr nehn idpm ikti'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # Define o remetente padrão como seu e-mail
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
