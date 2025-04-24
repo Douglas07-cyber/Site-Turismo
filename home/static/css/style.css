@@ -34,15 +34,23 @@ footer {
   border-radius: 10px;
 }
 
-/* === DIVISÕES === */
+/* === DIVISÃO === */
 .divisao {
   background-color: #5C4033 !important; /* Amarelo queimado */
   text-align: center !important;
-  color: #f7f4f4 !important;
+  color: #faf3f3 !important;
   padding: 2em !important;
+  /* formatação da fonte */
+  font-family:'playfair Display',serif !important;
+  color: #f7f1f1 !important;
 }
 
 /* === PACOTES === */
+body {
+  font-size: 16px; /* Tamanho de letra padrão */
+  font-family: Arial, sans-serif; /* Fonte base */
+}
+
 .sec-pacotes {
   margin: 2% 10% !important;
   display: flex;
@@ -58,17 +66,16 @@ footer {
   padding: 1.5rem !important;
   margin: 1rem !important;
   width: 300px;
-  height: auto; /* Deixe altura automática para ajustar ao conteúdo */
+  height: 1000px; /* Altura padrão */
   border-radius: 1rem;
   border: 2px solid #a8552c; /* Marrom terra */
   background-color: #fdf6e3; /* Tom claro de bege */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative; /* Para posicionar o botão dentro */
+  overflow: hidden;
 }
-
 
 .card:hover {
   transform: translateY(-5px);
@@ -87,7 +94,7 @@ footer {
   font-size: 1.25rem;
   font-weight: bold;
   margin-top: 0.75rem;
-  text-align: center;
+  text-align: center; /* Título centralizado */
 }
 
 .card p {
@@ -98,17 +105,20 @@ footer {
 }
 
 .card .btn {
-  background-color: #d4a825; /* Dourado cerrado */
+  background-color: #d4a825;
   border: none;
   font-weight: bold;
   color: #fff;
-  width: fit-content;
   font-size: 1rem;
   padding: 0.6rem 1.5rem;
-  margin: 1rem auto 0 auto; /* CENTRALIZA O BOTÃO */
-  display: block;
   border-radius: 8px;
   transition: background-color 0.3s;
+  text-align: center;
+
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
 }
 
 .card .btn:hover {
@@ -116,11 +126,6 @@ footer {
   color: #fff;
 }
 
-/* === CONTATO === */
-.sec-contato {
-  margin: 1% 20% 5% 20% !important;
-  justify-content: center !important;
-}
 
 /* === RESPONSIVO === */
 @media (max-width: 768px) {
