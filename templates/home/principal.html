@@ -12,7 +12,7 @@
         <div class="card-body">
             <h4 class="card-title">{{pacote.titulo}}</h4>
             <p class="card-text">{{pacote.descricao}}</p>
-            <a href="https://w.app/girassolturismo" target="_blank" class="btn btn-primary">Confira</a>
+            <a href="" target="_blank" class="btn btn-primary">Confira</a>
         </div>
     </div>
     {% endfor %}
@@ -33,13 +33,11 @@
                 
             </div>
             <div class="mb-3">
-                <label for="telefone" class="form-label">Telefone:</label>
-                {{ form.telefone }}
+                <label for="Email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="pwd" placeholder="Informe seu Email" name="pswd">
             </div>
-            <div class="mb-3">
-                <label for="comentario" class="form-label">Comentários:</label>
-                {{ form.mensagem }}
-            </div>
+            <label for="comment">Comentários:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
