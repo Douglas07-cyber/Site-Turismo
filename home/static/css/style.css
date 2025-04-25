@@ -10,7 +10,6 @@
 
 
 
-
 /* === FOOTER === */
 footer {
   background-color: #5C4033 !important; /* Marrom seco */
@@ -46,11 +45,6 @@ footer {
 }
 
 /* === PACOTES === */
-body {
-  font-size: 16px; /* Tamanho de letra padrão */
-  font-family: Arial, sans-serif; /* Fonte base */
-}
-
 .sec-pacotes {
   margin: 2% 10% !important;
   display: flex;
